@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5,h6 {
   color: midnightblue;
 }
 
-#existingTeamSelector {
+#existingGroupSelector {
   border: 1px solid gray;
   border-radius: 5px;
   width: fit-content;
@@ -34,12 +34,12 @@ h1,h2,h3,h4,h5,h6 {
   background-color: white;
 }
 
-#existingTeamSelector input {
+#existingGroupSelector input {
   margin-right: 10px;
   width: 30%;
 }
 
-.teamCreator {
+.groupCreator {
   background-color: white;
   width: fit-content;
   border: 1px solid gray;
@@ -53,6 +53,6 @@ h1,h2,h3,h4,h5,h6 {
   margin: 5px;
 }
 
-.teamCreator hr {
+.groupCreator hr {
   width: 50%;
 }

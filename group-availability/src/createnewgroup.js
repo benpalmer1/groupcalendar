@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class CreateNewTeam extends React.Component {
+export default class CreateNewGroup extends React.Component {
 
   constructor(props) {
     super(props);
@@ -12,6 +12,7 @@ export default class CreateNewTeam extends React.Component {
 
   onChangeSelectedDays(day, isChecked) {
     let arrCopy = this.state.selectedDays.slice();
+    
     if(isChecked) {
       arrCopy.push(day);
     }
@@ -24,14 +25,15 @@ export default class CreateNewTeam extends React.Component {
     });
   }
 
-  onSubmitCreateForm() {
-
+  onSubmitCreateForm(e) {
+    e.preventDefault();
+    console.log(e);
   }
 
   render() {
     return (
-      <form class="teamCreator" onSubmit={this.onSubmitCreateForm}>
-          <h2>Create a new team:</h2>
+      <form className="groupCreator" onSubmit={this.onSubmitCreateForm}>
+          <h2>Create a new group:</h2>
           <div id="myAvailability">
             <h3>My Availability</h3>
             <div>
@@ -48,12 +50,12 @@ export default class CreateNewTeam extends React.Component {
 
           <div id="groupDetails">
             <h3>Details</h3>
-            <label>Your name: <br></br><input type="text"></input></label>
+            <label>Group name: <br></br><input name="groupname" type="text"></input></label>
             <br></br>
-            <label>Group name: <br></br><input type="text"></input></label>
+            <label>Your name: <br></br><input name="name" type="text"></input></label>
             <br></br>
-            <label>Group password: <br></br><input type="password" placeholder="Leave blank for no password."></input></label>
-            <h5>If no password, the group's schedule is public but requires the unique team id to access.</h5>
+            <label>Your password: <br></br><input name="password" type="password" placeholder="Leave blank for no password."></input></label>
+            <h5>If no password, the group's schedule is public but requires the unique group id to access.</h5>
             <hr></hr>
           </div>
 

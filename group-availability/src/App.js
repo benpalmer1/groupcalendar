@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router-dom';
-import SelectExistingTeam from './selectexistingteam.js';
-import CreateNewTeam from './createnewteam.js';
-import Team from './team.js';
+import SelectExistingGroup from './selectexistinggroup.js';
+import CreateNewGroup from './createnewgroup.js';
+import Group from './group.js';
 
 import './App.css';
 
@@ -12,13 +12,13 @@ class Home extends React.Component {
     return (
       <div>
         <h1>Are you free?</h1>
-        <h2>Group scheduling app - figure out when your team is available.</h2>
+        <h2>Group scheduling app - figure out when everyone is available.</h2>
         <br></br>
         <br></br>
-        <SelectExistingTeam />
+        <SelectExistingGroup />
         <br></br>
         <br></br>
-        <CreateNewTeam />
+        <CreateNewGroup />
         <br></br>
         <br></br>
         <h6>Benjamin Palmer</h6>
@@ -33,7 +33,7 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <Route path="/" exact component={Home}/>
-          <Route path="/team/:teamid" component={Team}/>
+          <Route path="/group/:groupid" component={Group}/>
         </div>
       </Router>
     );
