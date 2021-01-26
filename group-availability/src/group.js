@@ -6,19 +6,11 @@ import React from 'react';
 
 // Edit individual availability 
 
-export default class Group extends React.Component {
-  constructor(props)
-  {
-    super(props);
-  }
-
-  componentWillMount() {
-
-  }
+function Group(props) {
   
-  render() {
     return (
-      <h1>{this.props.match.params.groupid}</h1>
+      <h1>{props.match.params.groupid}</h1>
     );
-  }
 }
+
+export default Group;

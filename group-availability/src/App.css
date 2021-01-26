@@ -4,8 +4,8 @@ body {
   text-align: center;
   vertical-align: top;
   position: absolute;
-  left: 20%;
-  right: 20%;
+  left: 10%;
+  right: 10%;
 }
 
 .options select, button {
@@ -45,14 +45,10 @@ h1,h2,h3,h4,h5,h6 {
   border: 1px solid gray;
   border-radius: 5px;
   margin: auto;
-  padding: 0px 20px 20px 20px;
+  padding: 20px 20px;
 }
 
 #groupDetails input {
-  width: 40%;
-  margin: 5px;
-}
-
-.groupCreator hr {
-  width: 50%;
+  width: 80%;
+  margin: auto
 }

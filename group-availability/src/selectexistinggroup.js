@@ -1,28 +1,20 @@
-import React from 'react';
-import LinkButton from './linkbutton.js'
+import React, { useState } from 'react';
+import LinkButton from './LinkButton.js'
 
- export default class SelectExistingGroup extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedGroupId: '',
-        }
-    }
+function SelectExistingGroup() {
 
-    textChanged = (event) => {
-        this.setState({
-            selectedGroupId: event.target.value,
-        });
-    }
+    const [selectedGroupId, setSelectedGroupId] = useState('');
+
+    const textChanged = (event) => setSelectedGroupId(event.target.value);
     
-    render() {
-        return (
-            <form id="existingGroupSelector">
-                <h2>Group already created? Enter the id:</h2>
-                <span>.../group/</span>
-                <input name="groupid" type="text" value={this.state.selectedGroupId} onChange={this.textChanged} />
-                <LinkButton to={"/group/"+this.state.selectedGroupId}>Show Group</LinkButton>
-            </form>
-        )
-    }
+    return (
+        <form id="existingGroupSelector">
+            <h2>Group already created? Enter the id:</h2>
+            <span>.../group/</span>
+            <input name="groupid" type="text" value={selectedGroupId} onChange={textChanged} />
+            <LinkButton to={"/group/"+selectedGroupId}>Show Group</LinkButton>
+        </form>
+    )
 }
+
+export default SelectExistingGroup;
